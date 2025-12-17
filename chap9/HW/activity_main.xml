@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="16dp">
+
+    <Button
+        android:id="@+id/btn_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="초기화"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp" />
+
+    <GridLayout
+        android:id="@+id/puzzle_grid"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:columnCount="3"
+        android:rowCount="3"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/btn_reset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        android:background="#000000"> <ImageView android:id="@+id/iv_tile_0" style="@style/GridTile" />
+        <ImageView android:id="@+id/iv_tile_1" style="@style/GridTile" />
+        <ImageView android:id="@+id/iv_tile_2" style="@style/GridTile" />
+
+        <ImageView android:id="@+id/iv_tile_3" style="@style/GridTile" />
+        <ImageView android:id="@+id/iv_tile_4" style="@style/GridTile" />
+        <ImageView android:id="@+id/iv_tile_5" style="@style/GridTile" />
+
+        <ImageView android:id="@+id/iv_tile_6" style="@style/GridTile" />
+        <ImageView android:id="@+id/iv_tile_7" style="@style/GridTile" />
+
+        <ImageView
+            android:id="@+id/iv_tile_8"
+            style="@style/GridTile"
+            android:visibility="invisible"
+            android:background="#FFFFFF" />
+
+    </GridLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
